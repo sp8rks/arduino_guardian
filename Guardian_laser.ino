@@ -1,3 +1,5 @@
+//Copyright Taylor Sparks 2018 (10-31-2018). Feel free to use this code but please retain attribution. 
+//If you use the code for your own project send me a picture of your creation! sparks@eng.utah.edu
 
 const int buttonPin = 13; 
 int brightness = 0;
@@ -35,11 +37,7 @@ void setup() {
   pinMode(Gone, OUTPUT);
   pinMode(Gtwo, OUTPUT);
   pinMode(Rone, OUTPUT);
-  // initialize the pushbutton pin as an input:
   pinMode(buttonPin, INPUT_PULLUP);
-//  pinMode(buttonPin, INPUT);
-
-  //Serial.begin(9600);
 }
 
 void loop() {
@@ -101,38 +99,7 @@ digitalWrite(Gone,LOW);
 digitalWrite(Ptwo,LOW);
 counter=counter+1;
 }
-//
-//if(counter>=16){
-//digitalWrite(Btwo,HIGH);
-//digitalWrite(Yone,HIGH);
-////analogWrite(Wone,brightness);
-//delay(pause);
-//digitalWrite(Btwo,LOW);
-//digitalWrite(Yone,LOW);
-////analogWrite(Wone,0);
-//digitalWrite(Gtwo,HIGH);
-//digitalWrite(Pone,HIGH);
-////analogWrite(Wtwo,brightness);
-//delay(pause);
-//digitalWrite(Gtwo,LOW);
-//digitalWrite(Pone,LOW);
-////analogWrite(Wtwo,0);
-//digitalWrite(Bone,HIGH);
-//digitalWrite(Ytwo,HIGH);
-////analogWrite(Wone,brightness);
-//delay(pause);
-//digitalWrite(Bone,LOW);
-//digitalWrite(Ytwo,LOW);
-////analogWrite(Wone,0);
-//digitalWrite(Gone,HIGH);
-//digitalWrite(Ptwo,HIGH);
-////analogWrite(Wtwo,brightness);
-//delay(pause);
-//digitalWrite(Gone,LOW);
-//digitalWrite(Ptwo,LOW);
-////analogWrite(Wtwo,0);
-//counter=counter+1;
-//  }
+
 if(counter>=8) {
 analogWrite(Wone,brightness);
 brightness=brightness+brightadd;
@@ -157,26 +124,8 @@ if(counter==16) {
   analogWrite(Wone,0);
   analogWrite(Wtwo,0);
   delay(250);
-//  analogWrite(Wone,255);
-//  analogWrite(Wtwo,255);
-//  delay(750);
-//  analogWrite(Wone,0);
-//  analogWrite(Wtwo,0);
-//  delay(250);
   counter=0;
   trigger=1;
 }
 }
-
-
-
-//Serial.print("clicker ");
-//Serial.println(buttonState);
-//Serial.print("trigger ");
-//Serial.println(trigger);
-//Serial.print("desired");
-//Serial.println(desiredValue);
-//Serial.print("counter");
-//Serial.println(counter);
-//delay(1000);
 }
